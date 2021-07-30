@@ -1,0 +1,1 @@
+C:\Users\hclark7\Documents\GitHub\Cogbox\cogbox\target\debug\cogbox.exe: C:\Users\hclark7\Documents\GitHub\Cogbox\cogbox\src\console\action.rs C:\Users\hclark7\Documents\GitHub\Cogbox\cogbox\src\console.rs C:\Users\hclark7\Documents\GitHub\Cogbox\cogbox\src\main.rs C:\Users\hclark7\Documents\GitHub\Cogbox\cogbox\src\scripts_manager.rs
