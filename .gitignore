@@ -1,2 +1,5 @@
 cogbox/scripts/
-cogbox/target/*
+/cogbox/target/debug
+/cogbox/target/release
+/cogbox/target/rls
+/cogbox/target/*
