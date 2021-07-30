@@ -3,6 +3,7 @@ use std::time::Duration;
 use std::thread;
 use std::process;
 use std::io;
+use colored::*;
 mod action;
 
 // Ask user what to do
@@ -29,12 +30,12 @@ fn compile_action(action: &str) {
             let _result = action::run_script(action[1]);
         }
         "stop" | "exit" | "cancel" | "close" => {
-            println!("[Process]: Exiting kogbox");
+            println!("{}", "[Process]: Exiting kogbox".bright_red());
             thread::sleep(Duration::from_millis(500));
             process::exit(0)
         }
         _ => {
-            println!("[Err]: Dumb Dumb that's not an action :/");
+            println!("{}", "[Err]: Dumb Dumb that's not an action :/".black().on_red());
         }
     }
     thread::sleep(Duration::from_millis(500));
