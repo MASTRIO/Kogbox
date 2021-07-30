@@ -23,7 +23,7 @@ fn compile_action(action: &str) {
         "create" => action::create_script(action[1]),
         "run" => {
             let _result = action::run_script(action[1]);
-        }    
+        }
         _ => {
             println!("[Err]: Dumb Dumb that's not an action :/");
         }

@@ -7,6 +7,13 @@ pub fn script_command(code: String) {
         "test" => {
             match code[1] {
                 "amogus" => println!("[Pog]: SUSSY!!!!"),
+                "bruh" => println!("[Pog]: epic"),
+                _ => invalid_argument(code[0], code[1])
+            }
+        }
+        "harvest" => {
+            match code[1] {
+                "tree" => println!("Harvested 1 tree"),
                 _ => invalid_argument(code[0], code[1])
             }
         }
