@@ -29,7 +29,7 @@ fn compile_action(action: &str) {
             let _result = action::run_script(action[1]);
         }
         "stop" | "exit" | "cancel" | "close" => {
-            println!("[Process]: Exiting Cogbox");
+            println!("[Process]: Exiting kogbox");
             thread::sleep(Duration::from_millis(500));
             process::exit(0)
         }
