@@ -1,5 +1,10 @@
+// Dependencies
+use std::time::Duration;
+use std::thread;
+
 // Run Script Commands
 pub fn script_command(code: String) {
+    thread::sleep(Duration::from_millis(250));
     let code: &str = &code;
     let code = code.split("::");
     let code: Vec<&str> = code.collect();
@@ -13,7 +18,7 @@ pub fn script_command(code: String) {
         }
         "harvest" => {
             match code[1] {
-                "tree" => println!("Harvested 1 tree"),
+                "tree" => println!("[Task]: Harvested 1 tree"),
                 _ => invalid_argument(code[0], code[1])
             }
         }
