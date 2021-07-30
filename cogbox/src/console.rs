@@ -21,7 +21,9 @@ fn compile_action(action: &str) {
     let action: Vec<&str> = action.collect();
     match action[0] {
         "create" => action::create_script(action[1]),
-        "run" => action::run_script(action[1]),
+        "run" => {
+            let _result = action::run_script(action[1]);
+        }    
         _ => {
             println!("[Err]: Dumb Dumb that's not an action :/");
         }
