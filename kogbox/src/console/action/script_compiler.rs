@@ -8,7 +8,10 @@ pub fn script_command(instruction: String) {
     thread::sleep(Duration::from_millis(250));
     let instruction: &str = &instruction;
     let instruction = instruction.split("::");
-    let instruction: Vec<&str> = instruction.collect();
+    let mut instruction: Vec<&str> = instruction.collect();
+    let args = instruction[1].split("[");
+    let args: Vec<&str> = args.collect();
+    instruction[1] = args[0];
     match instruction[0] {
         "test" => {
             match instruction[1] {
@@ -17,10 +20,11 @@ pub fn script_command(instruction: String) {
                 _ => invalid_argument(instruction[0], instruction[1])
             }
         }
-        "harvest" => {
+        "action" => {
             match instruction[1] {
-                "tree" => println!("{}", "[Script|Task]: Harvested 1 tree".cyan()),
-                "apple" => println!("{}", "[Script|Task]: Harvested 1 apple".cyan()),
+                "harvest" => {
+                    println!("{}{} {}", "[Script|Task]: Harvested ".cyan(), args[2].cyan(), args[1].cyan())
+                }
                 _ => invalid_argument(instruction[0], instruction[1])
             }
         }

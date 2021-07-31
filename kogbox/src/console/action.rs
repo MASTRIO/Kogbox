@@ -32,5 +32,7 @@ pub fn run_script(script_name: &str) -> io::Result<()> {
         script_compiler::script_command(line?);
     }
 
+    thread::sleep(Duration::from_millis(500));
+    println!("{}", "[Script|Run]: All script tasks completed".blue());
     Ok(())
 }
