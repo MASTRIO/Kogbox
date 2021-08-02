@@ -1,7 +1,7 @@
 // Dependencies
 use std::time::Duration;
 use std::thread;
-use colored::*;
+use colored::*; 
 mod scripts_manager;
 mod console;
 
@@ -12,7 +12,7 @@ fn main() {
     thread::sleep(Duration::from_secs(1));
     println!("Welcome to Kogbox!");
     let _scripts_dir = scripts_manager::create_dir();
-    console::ask_input();
+    console::ask_input()
 }
 
 fn initilizer() {
