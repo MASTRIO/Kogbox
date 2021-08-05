@@ -1,7 +1,7 @@
 // Dependencies
 use std::time::Duration;
 use std::thread;
-use colored::*; 
+use colored::*;
 mod scripts_manager;
 mod console;
 
