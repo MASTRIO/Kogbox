@@ -2,8 +2,8 @@
 use std::time::Duration;
 use std::thread;
 use colored::*;
+use console;
 mod scripts_manager;
-mod console;
 
 // Main
 fn main() {
@@ -12,7 +12,7 @@ fn main() {
     thread::sleep(Duration::from_secs(1));
     println!("Welcome to Kogbox!");
     let _scripts_dir = scripts_manager::create_dir();
-    console::ask_input()
+    console::get_command()
 }
 
 fn initilizer() {

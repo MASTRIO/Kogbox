@@ -4,7 +4,7 @@ use std::thread;
 use colored::*;
 
 // Run Script Commands
-pub fn script_command(instruction: String) {
+pub fn compile_command(instruction: String) {
     thread::sleep(Duration::from_millis(250));
     let instruction: &str = &instruction;
     let instruction = instruction.split("::");
@@ -36,12 +36,12 @@ pub fn script_command(instruction: String) {
                     match args[0].trim() {
                         "tree" => {
                             println!("{}{} {}", "[Script|Task]: Harvesting ".cyan(), args[1].trim().cyan(), "trees".cyan());
-                            thread::sleep(Duration::from_millis(100 * amount));
+                            thread::sleep(Duration::from_millis(50 * amount));
                             complete_task()
                         }
                         "rock" => {
                             println!("{}{} {}", "[Script|Task]: Harvesting ".cyan(), args[1].trim().cyan(), "rocks".cyan());
-                            thread::sleep(Duration::from_millis(100 * amount));
+                            thread::sleep(Duration::from_millis(50 * amount));
                             complete_task()
                         }
                         _ => invalid_instruction()

@@ -1,7 +1,7 @@
 [package]
-name = "kogbox"
+name = "script_manager"
 version = "0.1.0"
 edition = "2018"
 
 [dependencies]
-colored = "2"
+colored = "2.0.0"

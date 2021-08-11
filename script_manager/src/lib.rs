@@ -5,7 +5,7 @@ use std::fs::File;
 use std::io::{self, prelude::*, BufReader};
 use std::string::String;
 use colored::*;
-mod script_compiler;
+mod compiler;
 
 // Create Script
 pub fn create_script(script_name: &str) {
@@ -29,7 +29,7 @@ pub fn run_script(script_name: &str) -> io::Result<()> {
     let script_reader = BufReader::new(script);
 
     for line in script_reader.lines() {
-        script_compiler::script_command(line?);
+        compiler::compile_command(line?);
     }
 
     thread::sleep(Duration::from_millis(500));
